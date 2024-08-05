@@ -2,10 +2,8 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<section
-  class="flex flex-col md:flex-row justify-between items-center bg-brandGrey rounded-[45px] p-14 md:gap-[186px]"
->
-  <div class="md:w-1/2 flex flex-col gap-6">
+<section class="relative bg-brandGrey rounded-[45px] p-14 md:gap-[186px]">
+  <div class="flex flex-col gap-6 max-w-[500px] w-full">
     <h3 class="font-medium text-3xl">Let’s make things happen</h3>
     <p class="text-lg">
       Contact us today to learn more about how our digital marketing services
@@ -17,12 +15,7 @@ import { Icon } from "astro-icon/components";
       >
     </div>
   </div>
-  <div class="md:w-1/2 hidden md:block">
-    <Icon
-      name="section-make-things-happen"
-      width={360}
-      height={360}
-      class="w-full"
-    />
+  <div class="hidden md:block absolute right-32 -top-8">
+    <Icon name="section-make-things-happen" class="w-[359px] h-auto" />
   </div>
 </section>

@@ -15,17 +15,17 @@ const cases = [
     >
       Case Studies
     </h2>
-    <p class="text-center md:text-left md:w-[580px]">
+    <p class="text-center text-lg md:text-left md:w-[580px]">
       Explore Real-Life Examples of Our Proven Digital Marketing Success through
       Our Case Studies
     </p>
   </div>
   <div
-    class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-0 bg-brandDark py-16 rounded-[45px]"
+    class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-0 bg-white md:bg-brandDark rounded-[45px]"
   >
     {
       cases.map((caseStudy) => (
-        <div class="flex flex-col gap-5 px-16 md:border-r border-brandGrey">
+        <div class="flex flex-col gap-5 p-16 rounded-[45px] bg-brandDark">
           <p class="text-xl text-white">{caseStudy}</p>
           <div class="flex items-center gap-4 hover:underline hover:cursor-pointer decoration-brandGrey">
             <p class="text-xl text-brandGreen">Learn More</p>

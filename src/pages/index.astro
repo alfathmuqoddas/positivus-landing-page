@@ -1,0 +1,27 @@
+---
+import Accordion from "../components/Accordion.astro";
+import { Icon } from "astro-icon/components";
+import ServiceCard from "../components/ServiceCard.astro";
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layout/Layout.astro";
+import Hero from "../components/section/Hero.astro";
+import Brand from "../components/section/Brand.astro";
+import Services from "../components/section/Services.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Layout>
+      <Hero />
+      <Brand />
+      <Services />
+    </Layout>
+  </body>
+</html>

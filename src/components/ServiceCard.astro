@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon/components";
+const { title, title2, icon, color = "grey" } = Astro.props;
+---
+
+<div
+  class={`flex flex-col md:flex-row justify-between items-center rounded-[45px] drop-shadow-[0_5px_rgba(25,26,35,1)] ${color === "grey" ? "bg-brandGrey" : color === "dark" ? "bg-brandDark" : "bg-brandGreen"} p-8 border border-brandDark`}
+>
+  <div>
+    <div class="flex flex-col gap-8">
+      <div>
+        <h3
+          class={`text-3xl block ${color === "dark" ? "bg-white" : color === "green" ? "bg-white" : "bg-brandGreen"} rounded-md font-medium`}
+        >
+          {title}
+        </h3>
+        <h3
+          class={`text-3xl inline-block ${color === "dark" ? "bg-white" : color === "green" ? "bg-white" : "bg-brandGreen"} rounded-md font-medium`}
+        >
+          {title2}
+        </h3>
+      </div>
+      <div class="flex items-center gap-4">
+        {
+          color === "dark" ? (
+            <Icon name="icons-arrow-light" width="32" height="32" />
+          ) : (
+            <Icon name="icons-arrow-dark" width="32" height="32" />
+          )
+        }
+        <p
+          class={`text-xl ${color === "dark" ? "text-white" : "text-black"} hover:underline hover:cursor-pointer`}
+        >
+          Learn More
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <img class="text-right" src={icon} />
+  </div>
+</div>

@@ -1,15 +1,20 @@
 ---
+import { Icon } from "astro-icon/components";
+
 const { name, title, imgSrc = "/images/john-smith.png", content } = Astro.props;
 ---
 
 <article
   class="flex flex-col gap-5 p-[30px] border border-brandDark rounded-[45px] drop-shadow-[0_5px_rgba(25,26,35,1)] bg-white"
 >
-  <div class="flex gap-4 items-end border-b border-b-brandDark pb-6">
+  <div class="relative flex gap-4 items-end border-b border-b-brandDark pb-6">
     <img src={imgSrc} alt="John Smith" class="w-[100px] h-[100px]" />
     <div class="">
       <h4 class="text-lg font-medium">{name}</h4>
       <p>{title}</p>
+    </div>
+    <div class="absolute top-0 right-0">
+      <Icon name="icon-linkedin-dark" width={34} height={34} />
     </div>
   </div>
   <div>{content}</div>

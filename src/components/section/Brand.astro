@@ -5,10 +5,12 @@ const iconName = ["amazon", "dribble", "hubspot", "notion", "netflix", "zoom"];
 ---
 
 <section>
-  <div class="grid grid-cols-3 md:grid-cols-6 gap-4 justify-items-center">
+  <div
+    class="grid grid-cols-3 md:grid-cols-6 gap-x-8 md:gap-x-16 gap-y-8 justify-items-center"
+  >
     {
       iconName.map((icon) => (
-        <Icon name={`brand-${icon}`} width={124} height={48} />
+        <Icon name={`brand-${icon}`} class="w-full h-auto" />
       ))
     }
   </div>

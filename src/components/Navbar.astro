@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 
 const link = [
-  { name: "About Us", link: "#" },
+  { name: "About Us", link: "/about" },
   { name: "Services", link: "#" },
   { name: "Use Cases", link: "#" },
   { name: "Pricing", link: "#" },
@@ -12,13 +12,15 @@ const link = [
 
 <nav class="py-8 px-5 md:px-0 max-w-[1240px] mx-auto">
   <div class="flex justify-between items-center">
-    <div class="hover:cursor-pointer">
-      <Icon name="logo" width="220" height="56" />
-    </div>
+    <a class="hover:cursor-pointer" href="/">
+      <Icon name="logo" width={220} height={56} />
+    </a>
     <div class="gap-10 hidden md:flex text-xl">
       {
         link.map((link) => (
-          <div class="hover:underline hover:cursor-pointer">{link.name}</div>
+          <a class="hover:underline hover:cursor-pointer" href={link.link}>
+            {link.name}
+          </a>
         ))
       }
     </div>

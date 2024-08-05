@@ -23,9 +23,9 @@ const { title, title2, icon, color = "grey" } = Astro.props;
       <div class="flex items-center gap-4">
         {
           color === "dark" ? (
-            <Icon name="icons-arrow-light" width="32" height="32" />
+            <Icon name="icons-arrow-light" width={32} height={32} />
           ) : (
-            <Icon name="icons-arrow-dark" width="32" height="32" />
+            <Icon name="icons-arrow-dark" width={32} height={32} />
           )
         }
         <p

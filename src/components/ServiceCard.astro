@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 const { title, title2, icon, color = "grey" } = Astro.props;
 ---
 
-<div
+<article
   class={`flex flex-col md:flex-row justify-between items-center rounded-[45px] drop-shadow-[0_5px_rgba(25,26,35,1)] ${color === "grey" ? "bg-brandGrey" : color === "dark" ? "bg-brandDark" : "bg-brandGreen"} p-8 border border-brandDark`}
 >
   <div>
@@ -39,4 +39,4 @@ const { title, title2, icon, color = "grey" } = Astro.props;
   <div>
     <img class="text-right" src={icon} />
   </div>
-</div>
+</article>

@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section
+  class="flex flex-col md:flex-row justify-between items-center bg-brandGrey rounded-[45px] p-14 md:gap-[186px]"
+>
+  <div class="md:w-1/2 flex flex-col gap-6">
+    <h3 class="font-medium text-3xl">Let’s make things happen</h3>
+    <p class="text-lg">
+      Contact us today to learn more about how our digital marketing services
+      can help your business grow and succeed online.
+    </p>
+    <div>
+      <button class="py-5 px-8 bg-brandDark text-white rounded-[14px]"
+        >Get your free proposal</button
+      >
+    </div>
+  </div>
+  <div class="md:w-1/2 hidden md:block">
+    <Icon
+      name="section-make-things-happen"
+      width={360}
+      height={360}
+      class="w-full"
+    />
+  </div>
+</section>

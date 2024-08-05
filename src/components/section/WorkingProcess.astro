@@ -1,0 +1,64 @@
+---
+import { navigate } from "astro:transitions/client";
+import Accordion from "../Accordion.astro";
+import { normalizeTheLocale } from "astro:i18n";
+
+const data = [
+  {
+    no: "01",
+    title: "Consultation",
+    content:
+      "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    no: "02",
+    title: "Research and Strategy Development",
+    content:
+      "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    no: "03",
+    title: "Implementation",
+    content:
+      "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    no: "04",
+    title: "Monitoring and Optimization",
+    content:
+      "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    no: "05",
+    title: "Reporting and Communication",
+    content:
+      "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    no: "06",
+    title: "Continual Improvement",
+    content:
+      "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+];
+---
+
+<section class="flex flex-col gap-16">
+  <div class="flex flex-col md:flex-row items-center gap-10">
+    <h2
+      class="text-[40px] bg-brandGreen font-medium inline-block rounded-lg px-2"
+    >
+      Our Working Process
+    </h2>
+    <p class="text-center md:text-left md:w-[580px]">
+      Step-by-Step Guide to Achieving Your Business Goals
+    </p>
+  </div>
+  <div class="flex flex-col gap-8">
+    {
+      data.map((item) => (
+        <Accordion no={item.no} title={item.title} content={item.content} />
+      ))
+    }
+  </div>
+</section>

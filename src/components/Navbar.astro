@@ -15,15 +15,22 @@ const link = [
     <a class="hover:cursor-pointer" href="/">
       <Icon name="logo" width={220} height={56} />
     </a>
-    <div class="gap-10 hidden md:flex text-xl">
+    <div class="gap-10 hidden md:flex text-xl items-center">
       {
         link.map((link) => (
-          <a class="hover:underline hover:cursor-pointer" href={link.link}>
+          <a
+            class="hover:underline hover:cursor-pointer text-xl"
+            href={link.link}
+          >
             {link.name}
           </a>
         ))
       }
+      <div>
+        <button class="py-5 px-8 border border-brandDark rounded-[14px]"
+          >Request a quote</button
+        >
+      </div>
     </div>
   </div>
-  <nav></nav>
 </nav>

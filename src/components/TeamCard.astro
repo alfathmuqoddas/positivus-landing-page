@@ -8,7 +8,12 @@ const { name, title, imgSrc, content } = Astro.props;
   class="flex flex-col gap-5 p-[30px] border border-brandDark rounded-[45px] drop-shadow-[0_5px_rgba(25,26,35,1)] bg-white"
 >
   <div class="relative flex gap-4 items-end border-b border-b-brandDark pb-6">
-    <img src={imgSrc} alt="John Smith" class="w-[100px] h-[100px]" />
+    <img
+      src={imgSrc}
+      alt="John Smith"
+      class="w-[100px] h-[100px]"
+      loading="lazy"
+    />
     <div class="">
       <h4 class="text-lg font-medium">{name}</h4>
       <p>{title}</p>

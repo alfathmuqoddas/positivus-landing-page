@@ -62,7 +62,12 @@ const data = [
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
     {
       data.map(({ name, title, imgSrc, content }) => (
-        <TeamCard name={name} title={title} imgSrc={imgSrc} content={content} />
+        <TeamCard
+          name={name}
+          title={title}
+          imgSrc={`${import.meta.env.BASE_URL}${imgSrc}`}
+          content={content}
+        />
       ))
     }
   </div>

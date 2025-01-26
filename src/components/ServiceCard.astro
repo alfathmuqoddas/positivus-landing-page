@@ -4,7 +4,7 @@ const { title, title2, icon, color = "grey" } = Astro.props;
 ---
 
 <article
-  class={`flex flex-col md:flex-row justify-between items-center rounded-[45px] drop-shadow-[0_5px_rgba(25,26,35,1)] ${color === "grey" ? "bg-brandGrey" : color === "dark" ? "bg-brandDark" : "bg-brandGreen"} p-8 border border-brandDark`}
+  class={`flex flex-col md:flex-row justify-between items-center rounded-[45px] hover:shadow-[0_5px_rgba(25,26,35,1)] ${color === "grey" ? "bg-brandGrey" : color === "dark" ? "bg-brandDark" : "bg-brandGreen"} p-8 border border-brandDark transition-shadow duration-300 hover:cursor-pointer`}
 >
   <div>
     <div class="flex flex-col gap-8">
@@ -37,6 +37,10 @@ const { title, title2, icon, color = "grey" } = Astro.props;
     </div>
   </div>
   <div>
-    <img class="text-right" src={`/images/${icon}`} loading="lazy" />
+    <img
+      class="text-right"
+      src={`${import.meta.env.BASE_URL}/images/${icon}`}
+      loading="lazy"
+    />
   </div>
 </article>

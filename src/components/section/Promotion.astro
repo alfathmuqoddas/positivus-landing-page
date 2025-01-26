@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import Button from "../Button.astro";
 ---
 
 <section class="relative bg-brandGrey rounded-[45px] p-14 md:gap-[186px]">
@@ -9,11 +10,7 @@ import { Icon } from "astro-icon/components";
       Contact us today to learn more about how our digital marketing services
       can help your business grow and succeed online.
     </p>
-    <div>
-      <button class="py-5 px-8 bg-brandDark text-white rounded-[14px]"
-        >Get your free proposal</button
-      >
-    </div>
+    <Button text={"Get your free proposal"} />
   </div>
   <div class="hidden md:block absolute right-32 -top-8">
     <Icon name="section-make-things-happen" class="w-[359px] h-auto" />

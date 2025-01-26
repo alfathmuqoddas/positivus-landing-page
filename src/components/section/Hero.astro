@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import Button from "../Button.astro";
 ---
 
 <section>
@@ -16,11 +17,7 @@ import { Icon } from "astro-icon/components";
         through a range of services including SEO, PPC, social media marketing,
         and content creation.
       </p>
-      <div>
-        <button class="bg-brandDark text-white py-5 px-8 rounded-2xl"
-          >Book Consultation</button
-        >
-      </div>
+      <Button text={"Book a Consultation"} />
     </div>
     <div class="md:w-1/2">
       <Icon name="hero" class="w-full h-auto hidden md:block" />

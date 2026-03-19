@@ -1,6 +1,12 @@
 ---
 import { Icon } from "astro-icon/components";
 import Button from "../Button.astro";
+
+export interface Props {
+  t: any;
+}
+
+const { t } = Astro.props;
 ---
 
 <section>
@@ -9,13 +15,11 @@ import Button from "../Button.astro";
   >
     <div class="flex flex-col gap-8 md:w-1/2">
       <h1 class="text-6xl font-medium">
-        Navigating the digital landscape for success
+        {t.hero.title}
       </h1>
       <Icon name="hero" width={600} height={600} class="w-full md:hidden" />
       <p class="text-xl">
-        Our digital marketing agency helps businesses grow and succeed online
-        through a range of services including SEO, PPC, social media marketing,
-        and content creation.
+        {t.hero.description}
       </p>
       <Button text={"Book a Consultation"} />
     </div>

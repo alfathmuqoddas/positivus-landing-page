@@ -1,7 +1,17 @@
 ---
 import Layout from "../../layout/Layout.astro";
+import en from "../../locales/en.json";
+import id from "../../locales/id.json";
+
+export function getStaticPaths() {
+  return [{ params: { lang: "en" } }, { params: { lang: "id" } }];
+}
+
+const { lang } = Astro.params;
+const t = lang === "id" ? id : en;
 ---
 
 <Layout>
-  <div>This is the about page</div>
+  <h1 class="font-2xl font-bold">{t.about.title}</h1>
+  <div>{t.about.description}</div>
 </Layout>
